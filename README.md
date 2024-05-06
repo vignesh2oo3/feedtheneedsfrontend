@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Create React feed the needs App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+output 
+Streamlined user authentication with intuitive Signup screen
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/77229fa7-d0d2-43f0-9201-afd8b13ea504)
+Streamlined user authentication with intuitive login screens
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/e99fb811-218b-4e8c-bf8c-26ef7d8ae6dd)
+Simplified food donation process with an easy-to-use interface
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/6563da17-0b5e-401f-9064-e8a87b498633)
+Enhanced user experience through detailed food post displays.
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/4bc534c5-ede8-44ee-9021-04570d417da6)
+Efficient database maintenance with automated post deletion. 
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/ad8854ff-364c-4d96-88dd-19bc2f57955a)
+Visual appeal amplified through Facebook, Instagram and Telegram integration
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/4f819d3a-5b82-4108-b898-399dae0cb0f9)
+Enhanced efficiency with scheduled posts
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/d71e0b3f-0638-4077-af1e-6437deaba25d)
+Create Donation Announcement Page
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/8db5aea4-453f-4349-a14a-6c45b4c79925)
+Show Donation Announcement Page
+![image](https://github.com/vignesh2oo3/feedtheneedsfrontend/assets/169079078/ccf06d41-435c-4de4-a819-c67ab9e60c7c)
+
+
+
+
+
+
