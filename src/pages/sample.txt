@@ -1,0 +1,121 @@
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
+// const mapContainerStyle = {
+//   width: '100%',
+//   height: '400px',
+// };
+
+// const defaultCenter = { lat: 0, lng: 0 };
+
+// function Location() {
+//   const [locationLink, setLocationLink] = useState('');
+//   const [currentLocation, setCurrentLocation] = useState(defaultCenter);
+//   const [markedLocation, setMarkedLocation] = useState(null);
+//   const [latitude,setlatitude]=useState('');
+//   const [longitude,setlongitude]=useState('');
+  
+//   useEffect(() => {
+//     handleGetLocationLink();
+//   }, []); // Fetch location link on component mount
+
+//   const handleGetLocationLink = () => {
+//     if ("geolocation" in navigator) {
+//       const watchId = navigator.geolocation.watchPosition(
+//         async (position) => {
+//           const latitude = position.coords.latitude;
+//           const longitude = position.coords.longitude;
+//           setlatitude(latitude);
+//           setlongitude(longitude);
+//           setCurrentLocation({ lat: latitude, lng: longitude });
+  
+//           try {
+//             const response = await axios.post('http://localhost:2003/Location', {
+//               latitude,
+//               longitude,
+//               apiKey: 'AIzaSyC4lGnFzcN2rEzhskOfoTGiSOQqKwpn4Tk',
+//             });
+  
+//             setLocationLink(response.data.link);
+//           } catch (error) {
+//             console.error('Error sending location to the server:', error.message);
+//           }
+  
+//           // If you only need the location once, uncomment the line below to stop watching
+//           // navigator.geolocation.clearWatch(watchId);
+//         },
+//         (error) => {
+//           console.error('Error getting current position:', error.message);
+//         }
+//       );
+//     } else {
+//       console.error('Geolocation is not supported by your browser');
+//     }
+//   };
+  
+  
+//  const handlesendLocation=async()=>{
+//   try{
+//     const response = await axios.post('http://localhost:2003/Location', {
+//           latitude,
+//           longitude,
+//           apiKey: 'AIzaSyC4lGnFzcN2rEzhskOfoTGiSOQqKwpn4Tk',
+//         });
+       
+//         setLocationLink(response.data.link);
+//     } catch (error) {
+//       console.error('Error getting location link:', error.message);
+//     }
+//   };
+ 
+//   const handleMapClick = (event) => {
+//     const { latLng } = event;
+//     const latitude = latLng.lat();
+//     const longitude = latLng.lng();
+//     setlatitude(latitude);
+//     setlongitude(longitude);
+//     setMarkedLocation({ lat: latitude, lng: longitude });
+//   };
+
+//   const handleGetCurrentLocation = () => {
+//     debugger
+//     navigator.geolocation.getCurrentPosition((position) => {
+//       const latitude = position.coords.latitude;
+//       const longitude = position.coords.longitude;
+
+//       setCurrentLocation({ lat: latitude, lng: longitude });
+//       setMarkedLocation(null);
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <h1>Live Location</h1>
+//       <LoadScript googleMapsApiKey="AIzaSyC4lGnFzcN2rEzhskOfoTGiSOQqKwpn4Tk">
+//         <GoogleMap
+//           mapContainerStyle={mapContainerStyle}
+//           center={currentLocation}
+//           zoom={15}
+//           onClick={handleMapClick}
+//         >
+//           {markedLocation && <Marker position={markedLocation} />}
+//           <Marker position={currentLocation} />
+//         </GoogleMap>
+//       </LoadScript>
+//       <button onClick={handleGetLocationLink}>Get Live Location Link</button>
+//       <button onClick={handleGetCurrentLocation}>Show Current Location</button>
+//       <button onClick={handlesendLocation}>Send Location</button>
+//     <h1>{latitude}</h1>
+//     <h1>{longitude}</h1>
+//       {locationLink && (
+//         <div>
+//           <p>Live Location Link:</p>
+//           <a href={locationLink} target="_blank" rel="noopener noreferrer">
+//             {locationLink}
+//           </a>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
